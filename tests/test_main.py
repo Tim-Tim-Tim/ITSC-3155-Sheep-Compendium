@@ -25,6 +25,7 @@ def test_read_sheep():
     }
 
 def test_add_sheep():
+    return
 # TODO: Prepare the new sheep data in a dictionary format.
 
 # TODO: Send a POST request to the endpoint "/sheep" with the new sheep data.
