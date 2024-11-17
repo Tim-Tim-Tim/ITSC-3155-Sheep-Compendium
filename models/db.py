@@ -21,3 +21,31 @@ db.data = {
     6: Sheep(id=6, name="Esther", breed="Border Leicester", sex="ewe")
 }
 
+def add_sheep(self, sheep: Sheep) -> Sheep:
+    # Check if the sheep ID already exists
+    if sheep.id in self.data:
+        raise ValueError("Sheep with this ID already exists")
+    # Add the new sheep to the database
+    self.data[sheep.id] = sheep
+    return sheep
+
+def delete_sheep(self, id: int) -> Sheep:
+    # Check if the sheep ID already exists
+    if id in self.data:
+        # Remove the sheep from the database
+        sheep = self.data[id]
+        del self.data[id]
+        return sheep
+    else:
+        # Raise an error if the sheep does not exist
+        raise ValueError("Sheep with this ID does not exist")
+
+def update_sheep(self, id: int, sheep: Sheep) -> Sheep:
+    # Check if the sheep ID already exists
+    if id in self.data:
+        # Update the sheep in the database
+        self.data[id] = sheep
+        return sheep
+    else:
+        # Raise an error if the sheep does not exist
+        raise ValueError("Sheep with this ID does not exist")
